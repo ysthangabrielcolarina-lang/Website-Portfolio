@@ -1,0 +1,51 @@
+Development of a Web-Based Car Rental Reservation and Management System for a Small-Scale Vehicle Rental Business
+
+
+Introduction
+
+The advancement of technology has greatly influenced how businesses operate and provide services to their customers. Many businesses are now adopting digital systems to improve efficiency, reduce manual work, and provide better customer experiences. However, some small-scale businesses still rely on traditional methods such as personal messaging, phone calls, and manual record keeping to manage their daily operations.
+
+A vehicle rental business requires proper management of reservations, vehicle availability, customer information, rental schedules, and pricing. When these processes are handled manually, problems may occur, especially when multiple customers request vehicle rentals at the same time. Managing schedules, checking vehicle availability, and calculating rental fees based on duration and distance can become time-consuming and may result in errors.
+
+This proposed project aims to develop a Web-Based Vehicle Rental Reservation and Management System that will help improve the operations of a small-scale rent-a-car business. The system will provide customers with an online platform where they can view available vehicles, submit rental requests, and receive rental information. It will also assist the business owner in managing vehicles, reservations, schedules, and customer transactions in a more organized and efficient manner.
+
+
+BG OF THE STUDY
+
+The proposed study focuses on a small-scale rent-a-car business that currently manages its customer transactions through messaging applications. The business provides rental services using a limited fleet of vehicles composed of three vans and two cars. Customers usually contact the owner directly to ask about vehicle availability, rental rates, and booking schedules.
+
+Although this approach allows the business to communicate with customers, handling multiple inquiries and reservations at the same time creates challenges. There are situations where different customers request the same vehicle schedule, making it difficult for the owner to determine vehicle availability. In addition, computing rental fees can require considering different factors such as the length of rental, destination distance, and type of vehicle being rented.
+
+Without a centralized system, rental records, customer details, and schedules may become difficult to monitor. This can lead to delayed responses, scheduling conflicts, and possible mistakes in managing transactions. To address these challenges, a web-based system is proposed to automate and organize the reservation process, allowing both customers and the business owner to manage rental activities more effectively.
+
+
+OBJECTIVES
+
+General Objective
+
+To develop a Web-Based Vehicle Rental Reservation and Management System that will improve the efficiency of vehicle booking, scheduling, and transaction management for a small-scale rent-a-car business.
+
+Specific Objectives
+To develop an online reservation system that allows customers to request vehicle rentals without relying only on manual messaging.
+
+To create a vehicle availability tracking feature that prevents overlapping rental schedules.
+
+To develop a rental cost calculation feature based on rental duration, destination distance, and vehicle type.
+
+To provide an admin management system where the owner can monitor vehicles, customers, reservations, and rental records.
+
+To organize customer and rental information in a centralized database for easier access and management.
+
+To reduce manual processes and improve the accuracy and efficiency of handling rental transactions.
+
+
+SIGNIFICANCE
+
+Business Owner
+The proposed system will help the owner manage rental schedules, vehicle availability, customer information, and rental transactions in a more organized way. It will reduce the difficulty of handling multiple customer inquiries and minimize possible scheduling conflicts.
+
+Customers
+The system will provide customers with a convenient way to check available vehicles, submit rental requests, and receive rental details without waiting for manual responses.
+
+Future Researchers and Developers
+The study may provide useful information and ideas for future projects involving online reservation systems, vehicle management, and business automation.

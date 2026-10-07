@@ -1,0 +1,54 @@
+package com.pokedex.pokedex.controller;
+
+import com.pokedex.pokedex.model.Pokemon;
+import com.pokedex.pokedex.service.PokemonService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List; // imports list of pk
+
+@RestController // converts Java objects to JSON
+@RequestMapping("/pokemon")
+@CrossOrigin(origins = "*") // Allows requests from frontend
+public class PokemonController {
+
+    private final PokemonService service;
+
+    public PokemonController(PokemonService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Pokemon> getAllPokemon() { // handles a GET request to fetch all pk
+        return service.getAllPokemon();
+    }
+
+    @GetMapping("/{id}") // GET req
+    public Pokemon getPokemonById(@PathVariable Long id) {
+        return service.getAllPokemon()
+                .stream()
+                .filter(p -> p.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @PostMapping // handles HTTP POST requests
+    public Pokemon addPokemon(@RequestBody Pokemon pokemon) { // take JSON data from the request, convert it into pk object
+        return service.addPokemon(pokemon);
+    }
+
+    @PutMapping("/{id}") // PUT request
+    public Pokemon updatePokemon(
+            @PathVariable Long id,
+            @RequestBody Pokemon updatedPokemon) { // JSON request, Converts to Pokemon object
+        try {
+            return service.updatePokemon(id, updatedPokemon); // Calls the service to update the pk
+        } catch (RuntimeException e) {
+            throw new RuntimeException("Update failed: " + e.getMessage());
+        }
+    }
+
+    @DeleteMapping("/{id}") // handles DELETE method
+    public void deletePokemon(@PathVariable Long id) {
+        service.deletePokemon(id);
+    }
+}

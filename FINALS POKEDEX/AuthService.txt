@@ -1,0 +1,38 @@
+package com.pokedex.pokedex.service; // handles how users are created (register) and verified (login).
+
+import com.pokedex.pokedex.model.User;
+import com.pokedex.pokedex.repository.UserRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AuthService {
+
+    private final UserRepository userRepository;
+
+    public AuthService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    } // dependency injection para save and search users in the database
+
+    public User register(String username, String password) {
+        if (userRepository.findByUsername(username) != null) { // check if nag exists na
+            throw new RuntimeException("REGISTRATION FAILED!");
+        }
+
+        User user = new User(username, password);
+        return userRepository.save(user);
+    }
+
+    public User login(String username, String password) {
+        User user = userRepository.findByUsername(username);
+
+        if (user == null) {
+            throw new RuntimeException("User not found!");
+        }
+
+        if (!user.getPassword().equals(password)) {
+            throw new RuntimeException("Incorrect password!");
+        }
+
+        return user;
+    }
+}

@@ -1,0 +1,25 @@
+Goodmorning Sir this is our frontend HTML for ST Gabriel Academy. 
+
+Walkthrough muna s organization and LAYOUT.
+- sa leftside yung sidebar and yung main content nakadisplay sa harap.
+
+- ganyan layout para magimprove ang usability para mabilis ma-locate ng user yung info na gusto makita
+
+
+VISUAL DESIGN
+1. focus sa consistency and readability
+2. color blue and gold (promotes explosivity)
+3. Avoid unnecessary elements = easier to understand
+
+user-centered
+1. Every interactive element has proper labels
+2. Kada box (kung san magiinput) lagging may icon
+3. may guide text
+
+OVERALL 
+dashboard aims to allows students to immediately understand their current academic situation.
+
+1. GWA
+2. attendance
+3. pending tasks
+4. events
