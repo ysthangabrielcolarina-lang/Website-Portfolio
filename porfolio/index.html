@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of [YOUR NAME], a 3rd year BSIT student." />
+  <title>[YOUR NAME] | BSIT Student Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Lets CSS know JavaScript is available (so reveal animations never hide content without JS) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo">&lt;<span>Ysthan Gabriel E. Colarina</span> /&gt;</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <!-- The sliding underline (moved by script.js) -->
+        <li class="nav-indicator" id="navIndicator" aria-hidden="true"></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-glow glow-1" aria-hidden="true"></div>
+      <div class="hero-glow glow-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="status-tag">&lt;student.mode = "learning"&gt;</p>
+          <h1>Hi, I'm <span class="gradient-text">Ysthan Gabriel E Colarina</span></h1>
+          <h2 class="role">3rd Year BSIT Student</h2>
+          <p class="typed-line"><span class="prompt">&gt;</span> <span id="typed"></span><span class="cursor">_</span></p>
+          <p class="hero-desc">
+            An aspiring IT professional passionate about web development, databases,
+            programming, and building practical technology solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="terminal float">
+            <div class="terminal-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">student@bsit:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="out">BSIT Student</p>
+              <p><span class="prompt">$</span> current_status</p>
+              <p class="out">Learning &amp; Building</p>
+              <p><span class="prompt">$</span> focus.txt</p>
+              <p class="out">web dev | databases | programming</p>
+              <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+            </div>
+          </div>
+          <span class="floating-symbol s1" aria-hidden="true">&lt;/&gt;</span>
+          <span class="floating-symbol s2" aria-hidden="true">{ }</span>
+          <span class="floating-symbol s3" aria-hidden="true">SQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="comment">// </span>About Me</h2>
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <!-- YOUR PHOTO: save it as assets/images/profile.jpg (or change the src below) -->
+            <div class="photo-frame">
+              <img src="assets/images/profile.jpg" alt="Photo of [YOUR NAME]"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder">[YOUR PHOTO]</div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <p>
+              I'm currently a <strong>3rd-year Bachelor of Science in Information Technology</strong>
+              student. I'm still learning, but I enjoy turning what I study in class into small,
+              practical projects.
+            </p>
+            <p>
+              Right now I'm learning <strong>web development</strong> and
+              <strong>database administration</strong>, and I'm especially interested in
+              software and web development. I keep building projects to practice, make mistakes,
+              and get better at programming and technical problem-solving.
+            </p>
+            <ul class="about-list">
+              <li><code>learning</code> web development &amp; database administration</li>
+              <li><code>building</code> practical IT projects</li>
+              <li><code>improving</code> programming and technical skills every semester</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="comment">// </span>Skills</h2>
+        <p class="section-sub reveal">Technologies I'm learning and using in my coursework and projects.</p>
+
+        <div class="skills-grid">
+          <!-- ADD A SKILL: copy one card, then change the icon text, name, data-level, badge and percent -->
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><h3>HTML</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="85"></span></div>
+            <div class="skill-meta"><span class="badge">Comfortable</span><span class="pct">85%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">#</span><h3>CSS</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="80"></span></div>
+            <div class="skill-meta"><span class="badge">Comfortable</span><span class="pct">80%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">JS</span><h3>JavaScript</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="65"></span></div>
+            <div class="skill-meta"><span class="badge">Intermediate</span><span class="pct">65%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">&lt;?</span><h3>PHP</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="60"></span></div>
+            <div class="skill-meta"><span class="badge">Intermediate</span><span class="pct">60%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">Lv</span><h3>Laravel</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="55"></span></div>
+            <div class="skill-meta"><span class="badge">Learning</span><span class="pct">55%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">J</span><h3>Java</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="60"></span></div>
+            <div class="skill-meta"><span class="badge">Intermediate</span><span class="pct">60%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">SB</span><h3>Spring Boot</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="45"></span></div>
+            <div class="skill-meta"><span class="badge">Learning</span><span class="pct">45%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">DB</span><h3>MySQL</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="70"></span></div>
+            <div class="skill-meta"><span class="badge">Intermediate</span><span class="pct">70%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">PG</span><h3>PostgreSQL</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="65"></span></div>
+            <div class="skill-meta"><span class="badge">Intermediate</span><span class="pct">65%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">git</span><h3>Git / GitHub</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="65"></span></div>
+            <div class="skill-meta"><span class="badge">Intermediate</span><span class="pct">65%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">DBA</span><h3>Database Administration</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="55"></span></div>
+            <div class="skill-meta"><span class="badge">Learning</span><span class="pct">55%</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><span class="skill-icon">[ ]</span><h3>Responsive Web Design</h3></div>
+            <div class="bar"><span class="bar-fill" data-level="75"></span></div>
+            <div class="skill-meta"><span class="badge">Comfortable</span><span class="pct">75%</span></div>
+          </article>
+        </div>
+        <p class="skills-note reveal"><code>// levels are honest estimates and still growing</code></p>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="comment">// </span>Projects</h2>
+        <p class="section-sub reveal">Some of the things I've built while learning.</p>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-thumb"><span>&lt;/&gt;</span></div>
+            <div class="project-body">
+              <h3>Pokédex Web Application</h3>
+              <p>A web-based Pokédex application that allows users to browse Pokémon information and interact with data through a simple web interface.</p>
+              <ul class="tags">
+                <li>Java Spring Boot</li><li>MySQL</li><li>HTML/CSS/JS</li><li>REST API</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-thumb"><span>SQL</span></div>
+            <div class="project-body">
+              <h3>Library Database System</h3>
+              <p>A database project demonstrating relational database design, normalization, queries, and database management.</p>
+              <ul class="tags">
+                <li>PostgreSQL</li><li>Database Design</li><li>ERD</li><li>SQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal">
+            <div class="project-thumb"><span>Lv</span></div>
+            <div class="project-body">
+              <h3>Laravel Student Web Application</h3>
+              <p>A multi-page web application developed using Laravel while practicing routing, controllers, middleware, database connections, and CRUD operations.</p>
+              <ul class="tags">
+                <li>Laravel</li><li>PHP</li><li>Blade</li><li>PostgreSQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <!--
+            ADD A NEW PROJECT: copy the block below, remove the comment markers,
+            and paste it above this comment.
+
+            <article class="project-card reveal">
+              <div class="project-thumb"><span>NEW</span></div>
+              <div class="project-body">
+                <h3>Project Title</h3>
+                <p>Short description of the project.</p>
+                <ul class="tags"><li>Tech 1</li><li>Tech 2</li></ul>
+                <div class="project-links">
+                  <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="[YOUR GITHUB]" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section alt" id="education">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="comment">// </span>Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="edu-card">
+              <span class="edu-badge">Currently Enrolled</span>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p class="edu-year">3rd Year BSIT Student</p>
+              <ul class="edu-details">
+                <li><strong>University:</strong> Polytechnic University of the Philippines Calauan</li>
+                <li><strong>Expected Graduation:</strong> 2028</li>
+              </ul>
+              <h4>Relevant Subjects</h4>
+              <ul class="tags">
+                <li>Web Development</li>
+                <li>Database Administration</li>
+                <li>Multimedia</li>
+                <li>Fundamentals of Research</li>
+                <li>Programming</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="comment">// </span>Contact</h2>
+        <p class="section-sub reveal">Open to learning opportunities, collaborations, and internships. Say hi!</p>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <ul>
+              <li><span class="c-label">Gmail</span><span>ysthangabrielcoalrina@gmail.com</span></li>
+              <li><span class="c-label">GitHub</span><a href="https://github.com/ysthangabrielcolarina-lang" target="_blank" rel="noopener">ysthangabrielcolarina-lang</a></li>
+              <li><span class="c-label">Facebook</span><a href="https://www.facebook.com/ysthangabrielcolarina" target="_blank" rel="noopener">Ysthan Gabriel E. Colarina</a></li>
+              <li><span class="c-label">Location</span><span>Bay Laguna</span></li>
+            </ul>
+          </div>
+
+          <!-- FRONT-END ONLY form: it does not send anything (there is no backend) -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <p class="form-note">// front-end demo form. Messages are not sent anywhere.</p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">&lt;Ysthan Gabriel E. Colarina/&gt;</p>
+        <p class="footer-role">3rd Year BSIT Student</p>
+      </div>
+      <p class="copy">&copy; <span id="year">2026</span> Ysthan. All rights reserved.</p>
+      <div class="socials">
+        <a href="[YOUR GITHUB]" target="_blank" rel="noopener">ysthangabrielcolarina-lang</a>
+        <a href="[YOUR FACEBOOK]" target="_blank" rel="noopener">Ysthan Gabriel Colarina</a>
+        <a href="mailto:[YOUR EMAIL]">ysthangabrielcolarina@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
